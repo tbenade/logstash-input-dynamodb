@@ -19,12 +19,12 @@ Need help? Try #logstash on freenode IRC or the logstash-users@googlegroups.com 
 
 ## Developing
 
-### 1. Plugin Developement and Testing
+### 1. Plugin Development and Testing
 
 #### Code
 - To get started, you'll need JRuby with the Bundler gem installed.
 
-- Create a new plugin or clone and existing from the GitHub [logstash-plugins](https://github.com/logstash-plugins) organization. We also provide [example plugins](https://github.com/logstash-plugins?query=example).
+- Create a new plugin or clone an existing one from the GitHub [logstash-plugins](https://github.com/logstash-plugins) organization. We also provide [example plugins](https://github.com/logstash-plugins?query=example).
 
 - Install dependencies
 ```sh
@@ -167,9 +167,9 @@ config :<variable name>, <type of expected variable>, :required => <true if requ
   # Number of threads to write to the logstash queue when scanning the table
   config :number_of_write_threads, :validate => :number, :default => 1
 
-  # Configuation for how the logs will be transferred.
+  # Configuration for how the logs will be transferred.
   # plain is simply pass the message along without editing it.
-  # dynamodb will return just the data specified in the view_format in dynamodb format.
+  # DynamoDB will return just the data specified in the view_format in dynamodb format.
     # For more information see: docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataFormat.html
   # json_drop_binary will return just the data specified in the view_format in JSON while not including any binary values that were present.
   # json_binary_as_text will return just the data specified in the view_format in JSON while including binary values as base64-encoded text.
